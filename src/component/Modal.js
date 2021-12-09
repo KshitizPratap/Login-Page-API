@@ -11,6 +11,9 @@ const Modal = (props) => {
     else if(props.error === "Request failed with status code 402"){
         Description = "Account already exists."
     }
+    else if(props.error === "Request failed with status code 401"){
+        Description = "Incorrect password or email"
+    }
 
     return (
         <>

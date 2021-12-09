@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import classes from './FeedbackForm.module.css'
@@ -37,10 +37,12 @@ function FeedbackForm(){
 
         axios.post("https://ttmg-backend.herokuapp.com/api/auth/staffLogin", item)
             .then(res => {
-                console.log(res)
+                if(res.status === 200){
+                    setLogin(true);
+                }
             })
             .catch(error => {
-                console.log(error.message)
+                setErrorMessage(error.message);
             })
     }
 
@@ -69,13 +71,17 @@ function FeedbackForm(){
             <input 
                 type='email'
                 onChange = {(event) => setemail(event.target.value)}
-                placeholder = " Email"/>
+                placeholder = " Email"
+                />
             <p>Password:</p>
-            <input 
-                type='password'
-                onChange = {(event) => setpassword(event.target.value)}
-                placeholder = " Password"/>
-            
+            <div className = {classes.tooltip}>
+                <input 
+                    type='password'
+                    onChange = {(event) => setpassword(event.target.value)}
+                    placeholder = " Password"
+                    />
+                <span className = {classes.tooltiptext}>Password length should be more than 8.</span>
+            </div>
             <br/>
             <button onClick = {registerHandler}>Sign-Up</button>
 
@@ -93,9 +99,9 @@ function FeedbackForm(){
     if(buttonState){
         Inputs = (
             <>
-                {/* <Backdrop 
+                <Backdrop 
                     show = {errorMessage !== ""}
-                    errorDeletehandler = {errorDeletehandler}/> */}
+                    errorDeletehandler = {errorDeletehandler}/>
                 <p>Email Address:</p>
                 <input 
                     type='email'
