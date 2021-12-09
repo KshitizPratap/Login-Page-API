@@ -7,6 +7,7 @@ import {
 
 import Form from './component/FeedbackForm'
 import LandingPage from './component/LandingPage';
+import Start from './component/Start'
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
     <Router>
       <div className={classes.App}>
         <Routes>
-          <Route exact path='/Login-Page-API/signUp' element={< Form />}></Route>
-          <Route exact path='/Login-Page-API' element={< LandingPage />}></Route>
+        <Route exact path='/login-page-api' element={< Start />}></Route>
+          <Route exact path='/login-page-api/signUp' element={< Form />}></Route>
+          <Route exact path='/login-page-api/LandingPage' element={< LandingPage />}></Route>
         </Routes>
       </div>
     </Router>

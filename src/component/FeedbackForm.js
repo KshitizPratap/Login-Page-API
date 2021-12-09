@@ -10,8 +10,6 @@ function FeedbackForm(){
 
     const [buttonState, setButtonState] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
-    const [login, setLogin] = useState(false)
-
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
     const [name, setName] = useState("");
@@ -24,8 +22,8 @@ function FeedbackForm(){
         axios.post("https://ttmg-backend.herokuapp.com/api/auth/staffRegister", user)
             .then(res => {
                 if(res.status === 200){
-                    setLogin(true);
-                    window.location.href = "https://kshitizPratap.github.io/Login-Page-API"  
+                    window.location.href = " http://localhost:3000/login-page-api/LandingPage"
+                    // window.location.href = "https://kshitizPratap.github.io/login-page-api/LandingPage"  
                 }
             }).catch(error => {
                 setErrorMessage(error.message);
@@ -38,8 +36,8 @@ function FeedbackForm(){
         axios.post("https://ttmg-backend.herokuapp.com/api/auth/staffLogin", item)
             .then(res => {
                 if(res.status === 200){
-                    setLogin(true);
-                    window.location.href = "https://kshitizPratap.github.io/Login-Page-API"
+                    window.location.href = " http://localhost:3000/login-page-api/LandingPage"
+                    // window.location.href = "https://kshitizPratap.github.io/login-page-api/LandingPage"
                 }
             })
             .catch(error => {
@@ -50,11 +48,6 @@ function FeedbackForm(){
     const errorDeletehandler = () => {
         setErrorMessage("")
     }
-
-    let disabled = "";
-
-    if(login)
-        disabled = "disabled"
 
     let Inputs = (
         <>
@@ -92,7 +85,7 @@ function FeedbackForm(){
 
                 <button 
                     onClick = {registerHandler} 
-                    disabled = {login}>Sign-Up</button>
+                    >Sign-Up</button>
 
             <p style = {{fontSize : "12px"}}>Already have an account ? {" "} 
                 <span 
@@ -124,7 +117,7 @@ function FeedbackForm(){
                 <br/>
                 <Link to = "/">
                     <button onClick = {loginHandler}
-                    disabled = {login}>Login</button></Link>
+                    >Login</button></Link>
 
                 <p style = {{fontSize : "12px"}}>Don't have an account ?  {" "} 
                     <span 
