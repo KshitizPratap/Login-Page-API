@@ -14,8 +14,8 @@ function App() {
     <Router>
       <div className={classes.App}>
         <Routes>
-          <Route exact path='/signUp' element={< Form />}></Route>
-          <Route exact path='/' element={< LandingPage />}></Route>
+          <Route exact path='/Login-Page-API/signUp' element={< Form />}></Route>
+          <Route exact path='/Login-Page-API' element={< LandingPage />}></Route>
         </Routes>
       </div>
     </Router>

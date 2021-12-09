@@ -25,7 +25,7 @@ function FeedbackForm(){
             .then(res => {
                 if(res.status === 200){
                     setLogin(true);
-                    window.location.href = "http://localhost:3000/"
+                    window.location.href = "https://kshitizPratap.github.io/Login-Page-API"  
                 }
             }).catch(error => {
                 setErrorMessage(error.message);
@@ -39,7 +39,7 @@ function FeedbackForm(){
             .then(res => {
                 if(res.status === 200){
                     setLogin(true);
-                    window.location.href = "http://localhost:3000/"
+                    window.location.href = "https://kshitizPratap.github.io/Login-Page-API"
                 }
             })
             .catch(error => {
