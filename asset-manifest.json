@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Login-Page-API/signUp/static/css/main.95a476ee.chunk.css",
-    "main.js": "/Login-Page-API/signUp/static/js/main.f5fe56f3.chunk.js",
-    "main.js.map": "/Login-Page-API/signUp/static/js/main.f5fe56f3.chunk.js.map",
-    "runtime-main.js": "/Login-Page-API/signUp/static/js/runtime-main.daa1f92b.js",
-    "runtime-main.js.map": "/Login-Page-API/signUp/static/js/runtime-main.daa1f92b.js.map",
-    "static/js/2.031e67d9.chunk.js": "/Login-Page-API/signUp/static/js/2.031e67d9.chunk.js",
-    "static/js/2.031e67d9.chunk.js.map": "/Login-Page-API/signUp/static/js/2.031e67d9.chunk.js.map",
-    "static/js/3.621532c9.chunk.js": "/Login-Page-API/signUp/static/js/3.621532c9.chunk.js",
-    "static/js/3.621532c9.chunk.js.map": "/Login-Page-API/signUp/static/js/3.621532c9.chunk.js.map",
-    "index.html": "/Login-Page-API/signUp/index.html",
-    "static/css/main.95a476ee.chunk.css.map": "/Login-Page-API/signUp/static/css/main.95a476ee.chunk.css.map",
-    "static/js/2.031e67d9.chunk.js.LICENSE.txt": "/Login-Page-API/signUp/static/js/2.031e67d9.chunk.js.LICENSE.txt"
+    "main.css": "/login-page-api/signUp/static/css/main.95a476ee.chunk.css",
+    "main.js": "/login-page-api/signUp/static/js/main.90b3f18e.chunk.js",
+    "main.js.map": "/login-page-api/signUp/static/js/main.90b3f18e.chunk.js.map",
+    "runtime-main.js": "/login-page-api/signUp/static/js/runtime-main.7feccf11.js",
+    "runtime-main.js.map": "/login-page-api/signUp/static/js/runtime-main.7feccf11.js.map",
+    "static/js/2.031e67d9.chunk.js": "/login-page-api/signUp/static/js/2.031e67d9.chunk.js",
+    "static/js/2.031e67d9.chunk.js.map": "/login-page-api/signUp/static/js/2.031e67d9.chunk.js.map",
+    "static/js/3.621532c9.chunk.js": "/login-page-api/signUp/static/js/3.621532c9.chunk.js",
+    "static/js/3.621532c9.chunk.js.map": "/login-page-api/signUp/static/js/3.621532c9.chunk.js.map",
+    "index.html": "/login-page-api/signUp/index.html",
+    "static/css/main.95a476ee.chunk.css.map": "/login-page-api/signUp/static/css/main.95a476ee.chunk.css.map",
+    "static/js/2.031e67d9.chunk.js.LICENSE.txt": "/login-page-api/signUp/static/js/2.031e67d9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.daa1f92b.js",
+    "static/js/runtime-main.7feccf11.js",
     "static/js/2.031e67d9.chunk.js",
     "static/css/main.95a476ee.chunk.css",
-    "static/js/main.f5fe56f3.chunk.js"
+    "static/js/main.90b3f18e.chunk.js"
   ]
 }
