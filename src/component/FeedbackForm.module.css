@@ -73,4 +73,9 @@ button{
     border-style: solid;
     border-color: transparent black transparent transparent;
   }
+
+  button:disabled{
+    cursor:not-allowed;
+    background-color:grey;
+  }
   

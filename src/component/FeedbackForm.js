@@ -17,11 +17,7 @@ function FeedbackForm(){
     const [name, setName] = useState("");
     const [mobile, setMobile] = useState("");
 
-    console.log("[Form Rendering]")
-    console.log("[Login]", login)
-
     const registerHandler = async () => {
-        console.log("[Register Clicked]")
 
         const user = {email,password, name, mobile};
 
@@ -29,6 +25,7 @@ function FeedbackForm(){
             .then(res => {
                 if(res.status === 200){
                     setLogin(true);
+                    window.location.href = "http://localhost:3000/"
                 }
             }).catch(error => {
                 setErrorMessage(error.message);
@@ -36,14 +33,13 @@ function FeedbackForm(){
     }
 
     const loginHandler = async () => {
-        console.log("[Login Clicked]")
-
         let item = {email, password};
 
         axios.post("https://ttmg-backend.herokuapp.com/api/auth/staffLogin", item)
             .then(res => {
                 if(res.status === 200){
                     setLogin(true);
+                    window.location.href = "http://localhost:3000/"
                 }
             })
             .catch(error => {
@@ -55,10 +51,10 @@ function FeedbackForm(){
         setErrorMessage("")
     }
 
-    let link = "";
-    if(login){
-        link = "/"
-    }
+    let disabled = "";
+
+    if(login)
+        disabled = "disabled"
 
     let Inputs = (
         <>
@@ -81,7 +77,8 @@ function FeedbackForm(){
             <p>Email Address:</p>
             <input 
                 type='email'
-                onChange = {(event) => setemail(event.target.value)}/>
+                onChange = {(event) => setemail(event.target.value)}
+                placeholder = " Email"/>
 
             <p>Password:</p>
             <div className = {classes.tooltip}>
@@ -93,7 +90,9 @@ function FeedbackForm(){
                 <span className = {classes.tooltiptext}>Password length should be more than 8.</span>
             </div> <br/>
 
-            <Link to = {link}><button onClick = {registerHandler}>Sign-Up</button></Link>
+                <button 
+                    onClick = {registerHandler} 
+                    disabled = {login}>Sign-Up</button>
 
             <p style = {{fontSize : "12px"}}>Already have an account ? {" "} 
                 <span 
@@ -123,7 +122,9 @@ function FeedbackForm(){
                     onChange = {(event) => setpassword(event.target.value)}
                     placeholder = " Password"/>
                 <br/>
-                <Link to = {link}><button onClick = {loginHandler}>Login</button></Link>
+                <Link to = "/">
+                    <button onClick = {loginHandler}
+                    disabled = {login}>Login</button></Link>
 
                 <p style = {{fontSize : "12px"}}>Don't have an account ?  {" "} 
                     <span 
@@ -147,9 +148,7 @@ function FeedbackForm(){
                 </div>
             </div>
         </div>
-    )
-    
-    
+    )    
 }
 
 export default FeedbackForm;
