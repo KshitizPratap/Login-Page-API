@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function LandingPage(){
 
@@ -6,7 +7,7 @@ function LandingPage(){
         <div>
             <div>
                 <h1>Landing Page</h1>
-                <button>Logout</button>
+                <Link to = "/signUp"><button>Log-Out</button></Link>
             </div>
         </div>
     )
